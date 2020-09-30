@@ -36,6 +36,13 @@ public class EmployeeRestController {
         employeeService.save(newEmp);
         return employeeService.findAll();
     }
+    
+    @PutMapping("/update")
+    public List<Employee> save(@RequestBody Employee newEmp) {
+        employeeService.save(newEmp);
+        return employeeService.findAll();
+    }
+    
 
     @DeleteMapping("/{id}")
     public List<Employee> deleteById(@PathVariable int id) {
